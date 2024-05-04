@@ -1,0 +1,88 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <title>Dawid Witkowski Resume</title>
+
+    <link rel="stylesheet" type="text/css" href="css/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+</head>
+
+<body>
+    <!-- NAV MOBILE -->
+    <div class="nakladka" id="MENU">
+        <a href="javascript:void(0)" class="zamknijX" onClick="hideMenu()">
+            &times;
+        </a>
+
+        <ol>
+            <li><a href="#aboutMe" onClick="hideMenu()">Sekcja 1</a></li>
+            <li><a href="#howICanHelp" onClick="hideMenu()">Sekcja 2</a></li>
+            <li><a href="#myExperience" onClick="hideMenu()">Sekcja 3</a></li>
+            <li><a href="#myProjects" onClick="hideMenu()">Sekcja 4</a></li>
+            <li><a href="#contactInfo" onClick="hideMenu()">Sekcja 5</a></li>
+            <li><a href="#stopka" onClick="hideMenu()">Stopka </a></li>
+        </ol>
+    </div>
+
+    <span class="burger" onClick="showMenu()">
+		&#9776;
+	</span>
+
+    <script>
+        function showMenu(){
+            document.getElementById("MENU").style.width="100%";
+        }
+        function hideMenu(){
+            document.getElementById("MENU").style.width="0";
+        }
+    </script>
+
+    <!-- NAV DESKTOP -->
+    <nav>
+        <ol>
+            <li><a href="#aboutMe">About me</a></li>
+            <li><a href="#howICanHelp">How I can help you</a></li>
+            <li><a href="#myExperience">My experience</a></li>
+            <li><a href="#myProjects">My projects</a></li>
+            <li><a href="#contactInfo">Contact info</a></li>
+            <li><a href="#stopka">Send me a message</a></li>
+        </ol>
+    </nav>
+
+    <section id="aboutMe">
+        <div class="zawartosc">
+            <h1 class="row1">Dawid Witkowski</h1>
+            <div class="row2">
+                Android Developer @ <a target=_blank href="https://www.accenture.com/pl-pl" style="display: inline-block;">Accenture</a>,
+                <br>
+                Student @ <a target=_blank href="https://www.wit.edu.pl/" style="display: inline-block;">WIT</a>
+            </div>
+            <div class="row3">
+                dev with a passion and over 2 years of professional experience working on retail applications for multi-billion companies
+            </div>
+        </div>
+    </section>
+
+    <section id="stopka">
+        <div class="zawartosc">
+            <form>
+                <label for="mail">e-mail:</label>
+                <input type="email" id="mail" name="mail" required>
+                <br>
+                <label for="message">message</label>
+                <input type="text" id="message" name="message" required>
+                <br>
+                <label for="isAStudent">I'm a student:</label>
+                <input type="checkbox" id="isAStudent" name="isAStudent">
+                <br>
+                <br>
+                <button type="submit">Submit</button>
+                <button type="reset">Clear</button>
+            </form>
+        </div>
+    </section>
+
+
