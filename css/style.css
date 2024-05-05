@@ -21,7 +21,7 @@ html{
 }
 body{
     font-size: 1.6rem;
-    background-color: rgb(43,45,44,255);
+    background-color: rgba(43,45,44,255);
 }
 
 a{
@@ -31,6 +31,27 @@ a{
 }
 img{
     max-width: 100%;
+}
+.zawartosc {
+    padding-bottom: 2rem;
+}
+hr {
+    overflow: visible; /* For IE */
+    height: 30px;
+    border-style: solid;
+    border-color: rgba(217,173,6,255);
+    border-width: 1px 0 0 0;
+    border-radius: 20px;
+}
+hr:before {
+    display: block;
+    content: "";
+    height: 30px;
+    margin-top: -31px;
+    border-style: solid;
+    border-color: rgba(217,173,6,255);
+    border-width: 0 0 1px 0;
+    border-radius: 20px;
 }
 
 
@@ -119,6 +140,60 @@ div .button-row {
     justify-content: space-between; /* Optional: Adds space between the buttons */
 }
 
+#howICanHelp{
+    background-color: #eee;
+}
+/*#howICanHelp .zawartosc{*/
+/*    display: flex;*/
+/*    gap: 2rem;*/
+/*    flex-direction: row;*/
+/*    flex-wrap: nowrap;*/
+/*}*/
+/*#howICanHelp article{*/
+/*    flex: 1 1 250px;*/
+/*}*/
+
+
+/*#myProjects{*/
+/*    background-color: #aaa;*/
+/*}*/
+#contactInfo{}
+
+#stopka{
+    background-color: black;
+    color: white;
+}
+
+#aboutMe .zawartosc {
+    text-align: center;
+}
+
+
+/*how can I help */
+#howICanHelp .zawartosc {
+    background-color: rgba(43,45,44,255);
+    padding-left: 4rem;
+    padding-right: 4rem;
+}
+#howICanHelp .row1 {
+    text-align: right;
+}
+#howICanHelp .row2 {
+    text-align: left;
+}
+#howICanHelp .row2 {
+    text-align: right;
+}
+.column {
+    float: left;
+    width: 33.33%;
+}
+/*.row:after {*/
+/*    content: "";*/
+/*    display: table;*/
+/*    clear: both;*/
+/*}*/
+
 
 /* dostosowanie do szerokości mobilnej (smartfon) */
 @media all and (max-width:600px){
@@ -136,47 +211,60 @@ div .button-row {
         flex-direction: column;
         gap: 6rem;
     }
+    .column {
+        width: 100%;
+    }
+}
+
+
+/* CSS Slider container */
+.imageshow-container {
+    max-width: 400px;
+    /*position: relative;*/
+    margin: auto;
+}
+
+/* Hide the images by default  */
+.imageClass {
+    display: none;
+}
+
+.imageClass img {
+    width: 50%; /* Adjust this value as needed to scale down the images */
 }
 
 
 
-#aboutMe{}
-#aboutMe .zawartosc{}
-#logo{}
-#aboutMe h1{}
-#aboutMe a{}
-#aboutMe a:hover{}
-
-#howICanHelp{
-    background-color: #eee;
-}
-#howICanHelp .zawartosc{
-    display: flex;
-    gap: 2rem;
-    flex-direction: row;
-    flex-wrap: nowrap;
-    flex-wrap: wrap;
-}
-#howICanHelp article{
-    flex: 1 1 250px;
-}
-#howICanHelp article img{}
-#howICanHelp article h2{}
-#howICanHelp article p{}
-
-#myExperience{}
-#myExperience h3{}
-
-#myProjects{
-    background-color: #aaa;
-}
-#contactInfo{}
-
-#stopka{
-    background-color: black;
-    color: white;
+/* Adding fading animation */
+.fade {
+    animation-name: fade;
+    animation-duration: 1.5s;
 }
 
-#aboutMe .zawartosc {
-    text-align: center;
+@keyframes fade {
+    from {
+        opacity: .4
+    }
+
+    to {
+        opacity: 1
+    }
+}
+
+/* Defining the dot styles */
+.dot {
+    cursor: pointer;
+    height: 15px;
+    width: 15px;
+    margin: 0 2px;
+    background-color: #bbb;
+    border-radius: 50%;
+    display: inline-block;
+    transition: background-color 0.6s ease;
+}
+
+/* Setting a different style for hovering and active */
+.active,
+.dot:hover {
+    background-color: rgba(217,173,6,255);
 }
