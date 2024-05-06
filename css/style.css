@@ -1,13 +1,12 @@
 @charset "utf-8";
 @import url('https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap');
 
-
 /***
 color scheme:
-background: rgba(43,45,44,255)
-interactive: rgba(217,173,6,255)
-background-dark: rgba(217,173,6,255)
-background-light: rgba(62,64,63,255)
+background: #2b2d2c
+interactive: #d9ad06
+background-dark: #323232
+background-light: #3e403f
 ***/
 
 *{
@@ -21,19 +20,21 @@ html{
 }
 body{
     font-size: 1.6rem;
-    background-color: rgba(43,45,44,255);
+    background-color: #2b2d2c
 }
 
 a{
     text-decoration: none;
     display: block;
-    color: rgba(217,173,6,255);
+    color: #d9ad06
 }
 img{
     max-width: 100%;
 }
 .zawartosc {
     padding-bottom: 2rem;
+    align-items: center;/*wyśr. na wys.*/
+    justify-content: center;/*wyśr. na szer.*/
 }
 hr {
     overflow: visible; /* For IE */
@@ -52,6 +53,15 @@ hr:before {
     border-color: rgba(217,173,6,255);
     border-width: 0 0 1px 0;
     border-radius: 20px;
+}
+
+section {
+    scroll-margin-top: 10rem;/*menu nie zasłania treści sekcji*/
+}
+
+h4 {
+    color: dimgray;
+    text-align: center;
 }
 
 
@@ -112,12 +122,11 @@ hr:before {
 
 /*NAWIGACJA DESKTOP*/
 nav{
-    background-color: rgba(0,0,0,.4);
+    background-color: rgba(0,0,0,0.9);
     display: flex;
     justify-content: center;
     align-items: center;
     padding: 1rem;
-
     position: sticky;
     top: 0;
 }
@@ -137,7 +146,7 @@ nav ol li a:hover{
 }
 div .button-row {
     display: flex;
-    justify-content: space-between; /* Optional: Adds space between the buttons */
+    justify-content: space-between;
 }
 
 #howICanHelp{
@@ -160,12 +169,13 @@ div .button-row {
 #contactInfo{}
 
 #stopka{
-    background-color: black;
-    color: white;
+    background-color: rgba(0,0,0,0.9);
+    text-align: center;
 }
 
 #aboutMe .zawartosc {
     text-align: center;
+    padding: 0;
 }
 
 
@@ -181,18 +191,31 @@ div .button-row {
 #howICanHelp .row2 {
     text-align: left;
 }
-#howICanHelp .row2 {
+#howICanHelp .row3 {
     text-align: right;
 }
-.column {
+
+#mySkills .column {
     float: left;
     width: 33.33%;
+    text-align: center;
 }
-/*.row:after {*/
-/*    content: "";*/
-/*    display: table;*/
-/*    clear: both;*/
-/*}*/
+
+#mySkills .zawartosc:after {
+    content: "";
+    display: table;
+    clear: both;
+}
+
+
+.contactInfo {
+    display: flex;
+    justify-content: center;
+}
+
+.contactInfo a {
+    display: inline-block;
+}
 
 
 /* dostosowanie do szerokości mobilnej (smartfon) */
@@ -204,7 +227,7 @@ div .button-row {
         display: none;
     }
     section{
-        min-height: 100vh;
+        min-height: 5vh;
         scroll-margin-top: 0;
     }
     #howICanHelp .zawartosc{
@@ -214,25 +237,44 @@ div .button-row {
     .column {
         width: 100%;
     }
+    .table {
+        display: none;
+    }
+
+    /*why does text-align align images???*/
+    #contactInfo .zawartosc {
+        text-align: center;
+    }
+
+    #contactInfo .mobile {
+        display: block;
+    }
+
+    input[type="text"],
+    input[type="email"] {
+        width: 33%;
+        height: 25px;
+    }
+
+    button {
+        width: 33%;
+    }
+
+    input[type="checkbox"] {
+        transform: scale(1.5);
+    }
+
 }
 
-
-/* CSS Slider container */
 .imageshow-container {
     max-width: 400px;
     /*position: relative;*/
     margin: auto;
 }
 
-/* Hide the images by default  */
-.imageClass {
-    display: none;
-}
-
 .imageClass img {
-    width: 50%; /* Adjust this value as needed to scale down the images */
+    width: 50%;
 }
-
 
 
 /* Adding fading animation */
@@ -263,8 +305,14 @@ div .button-row {
     transition: background-color 0.6s ease;
 }
 
-/* Setting a different style for hovering and active */
 .active,
 .dot:hover {
     background-color: rgba(217,173,6,255);
+}
+
+#contactInfo .zawartosc .table {
+    margin-left: auto;
+    margin-right: auto;
+    /* apparently spacing it left and right the same amount does not center it*/
+    padding-left: 5rem;
 }

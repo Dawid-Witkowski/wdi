@@ -20,12 +20,12 @@
         </a>
 
         <ol>
-            <li><a href="#aboutMe" onClick="hideMenu()">Sekcja 1</a></li>
-            <li><a href="#howICanHelp" onClick="hideMenu()">Sekcja 2</a></li>
-            <li><a href="#myExperience" onClick="hideMenu()">Sekcja 3</a></li>
-            <li><a href="#myProjects" onClick="hideMenu()">Sekcja 4</a></li>
-            <li><a href="#contactInfo" onClick="hideMenu()">Sekcja 5</a></li>
-            <li><a href="#stopka" onClick="hideMenu()">Stopka </a></li>
+            <li><a href="#aboutMe">About me</a></li>
+            <li><a href="#howICanHelp">How I can help you</a></li>
+            <li><a href="#mySkills">My skills</a></li>
+            <li><a href="#myProjects">My projects</a></li>
+            <li><a href="#contactInfo">Contact info</a></li>
+            <li><a href="#stopka">Send me a message</a></li>
         </ol>
     </div>
 
@@ -38,7 +38,7 @@
             document.getElementById("MENU").style.width="100%";
         }
         function hideMenu(){
-            document.getElementById("MENU").style.width="0";
+            document.getElementById("MENU").style.width="0%";
         }
     </script>
 
@@ -47,7 +47,7 @@
         <ol>
             <li><a href="#aboutMe">About me</a></li>
             <li><a href="#howICanHelp">How I can help you</a></li>
-            <li><a href="#myExperience">My experience</a></li>
+            <li><a href="#mySkills">My skills</a></li>
             <li><a href="#myProjects">My projects</a></li>
             <li><a href="#contactInfo">Contact info</a></li>
             <li><a href="#stopka">Send me a message</a></li>
@@ -72,6 +72,7 @@
 
     <section id="howICanHelp">
         <div class="zawartosc">
+            <h4>// how I can help</h4>
             <div class="row1">With my experience in Jetpack Compose Stability will fix any potential lags or poor UX in your product</div>
             <div class="row2">My knowledge in baseline profiles will help your product's app startup time</div>
             <div class="row3">My interest in security will ensure your app becomes impossible to reverse engineer</div>
@@ -79,30 +80,35 @@
     </section>
 
     <hr>
+    <section id="mySkills">
+        <div class="zawartosc">
+            <h4>// my skills</h4>
+            <div class="column">kotlin, java, python, bash</div>
+            <div class="column">Android Jetpack, Compose, XML</div>
+            <div class="column">MVVM, MVI, MVC, DI, Firebase, Gradle, Version Catalogs, Baseline profiles, Publishing libraries internally, espresso tests, unit tests</div>
+        </div>
+    </section>
+    <hr>
 
     <section id="myProjects">
         <div class="imageshow-container">
-            <!-- Individual image slides -->
+            <h4>// projects I worked on</h4>
             <div class="imageClass">
                 <img src="img/hm.jpg" style="width:100%">
-                <!-- Caption for the first image -->
                 <div style="text-align: center;">H&M</div>
             </div>
 
             <div class="imageClass">
                 <img src="img/reserved.jpg" style="width:100%">
-                <!-- Caption for the second image -->
                 <div style="text-align: center;">Reserved</div>
             </div>
 
             <div class="imageClass">
                 <img src="img/shein.jpg" style="width:100%">
-                <!-- Caption for the third image -->
                 <div style="text-align: center;">Shein</div>
             </div>
         </div>
         <br>
-        <!-- The dots/circles for navigation -->
         <div style="text-align:center">
             <span class="dot" onclick="currentImage(1)"></span>
             <span class="dot" onclick="currentImage(2)"></span>
@@ -110,13 +116,55 @@
         </div>
     </section>
 
+    <!--  In my defense, they just look good, cannot be bothered to create a card for every section -->
+    <hr>
+
+    <section id="contactInfo">
+        <div class="zawartosc">
+            <h4>// find me </h4>
+            <!-- stolen from my github readme :D -->
+            <table class="table">
+                <tr>
+                    <td>Gmail</td>
+                    <td>
+                        <a href="mailto:dawidwitkowski.dev@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" title="Send me a mail :)"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Stackoverflow</td>
+                    <td>
+                        <a href="https://stackoverflow.com/users/15749574/justsightseeing" target="_blank"><img src="https://img.shields.io/badge/StackOverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white" title="Find me on stackoverflow"></a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>LinkedIn</td>
+                    <td><a href="https://www.linkedin.com/in/dawid-witkowski-74b687214" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" title="Open my LinkedIn profile"></a></td>
+                </tr>
+            </table>
+            <div class="mobile">
+                <div class="mobileMail">
+                    <a href="mailto:dawidwitkowski.dev@gmail.com" target="_blank"><img src="https://img.shields.io/badge/Gmail-D14836?style=for-the-badge&logo=gmail&logoColor=white" title="Send me a mail :)"></a>
+                </div>
+                <br>
+                <div class="mobileStackoverflow">
+                    <a href="https://stackoverflow.com/users/15749574/justsightseeing" target="_blank"><img src="https://img.shields.io/badge/StackOverflow-FE7A16?style=for-the-badge&logo=stack-overflow&logoColor=white" title="Find me on stackoverflow"></a>
+                </div>
+                <br>
+                <div class="mobileLinkedin">
+                    <a href="https://www.linkedin.com/in/dawid-witkowski-74b687214" target="_blank"><img src="https://img.shields.io/badge/LinkedIn-0077B5?style=for-the-badge&logo=linkedin&logoColor=white" title="Open my LinkedIn profile"></a>
+                </div>
+            </div>
+        </div>
+    </section>
+
     <section id="stopka">
         <div class="zawartosc">
+            <h4>// send me a messaage :)</h4>
             <form>
                 <label for="mail">e-mail:</label>
                 <input type="email" id="mail" name="mail" required>
                 <br>
-                <label for="message">message</label>
+                <label for="message">message:</label>
                 <input type="text" id="message" name="message" required>
                 <br>
                 <label for="isAStudent">I'm a student:</label>

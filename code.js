@@ -18,9 +18,16 @@ function currentImage(n) {
     images[n - 1].style.display = "block";
     // Add the "active" class to the corresponding navigation dot
     dots[n - 1].className += " active";
-    console.log("Wtf")
 }
 
 document.addEventListener("DOMContentLoaded", function() {
-    currentImage(1);
+    var currImg = 1;
+    window.setInterval(function() {
+        if(currImg === 3) {
+            currImg = 1;
+        } else {
+            currImg += 1;
+        }
+        currentImage(currImg);
+    }, 2500);
 });
